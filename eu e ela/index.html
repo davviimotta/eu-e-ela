@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa História de Amor</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Canvas Confetti Library para a celebração -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Tela de Abertura / Boas-vindas -->
+  <div id="intro-screen" class="intro-screen">
+    <div class="intro-content">
+      <span class="sub-intro">Preparei algo especial para você</span>
+      <h1>Para o amor da minha vida</h1>
+      <p>Coloque seus fones ou ligue o som para uma experiência melhor.</p>
+      <button id="start-btn" class="glow-btn">Começar nossa jornada ✨</button>
+    </div>
+  </div>
+
+  <!-- Música de fundo (adicione seu arquivo mp3 na pasta ou troque o link) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="YTDown.com_YouTube_For-my-girl-ayosherm-ft-Anti-Fl4w_Media_4Mulw2CjtKQ_009_128k.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Partículas de Coração de Fundo -->
+  <div id="hearts-container"></div>
+
+  <!-- Conteúdo Principal -->
+  <main id="main-content" class="hidden">
+    
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <p class="tagline">Cada segundo ao seu lado vale uma eternidade</p>
+        <h1 class="couple-names">Você & Eu</h1>
+        <div class="timer-box">
+          <p>Estamos construindo nossa história há:</p>
+          <div id="counter" class="counter">Calculando...</div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Role para baixo</span>
+        <div class="arrow">↓</div>
+      </div>
+    </header>
+
+    <!-- Linha do Tempo / Melhores Momentos -->
+    <section class="timeline-section">
+      <h2 class="section-title">Capítulos Inesquecíveis</h2>
+      <div class="timeline">
+
+        <div class="timeline-item left">
+          <div class="content">
+            <div class="photo-card">
+              <!-- Substitua pela foto do primeiro encontro -->
+              <img src="_).jpg" alt="Primeiro Encontro">
+            </div>
+            <span class="date">O Início</span>
+            <h3>O Dia em que Tudo Mudou</h3>
+            <p>Aquele primeiro olhar, o nervosismo no estômago e a certeza imediata de que você não seria apenas mais alguém na minha vida.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="content">
+            <div class="photo-card">
+              <!-- Substitua por outra foto especial -->
+              <img src="25473554137118813.jpg" alt="Viagem ou Momento Raro">
+            </div>
+            <span class="date">Nossas Aventuras</span>
+            <h3>Cada Riso Compartilhado</h3>
+            <p>Descobri que qualquer lugar do mundo vira o meu favorito quando você está de mãos dadas comigo.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="content">
+            <div class="photo-card">
+              <img src="ChatGPT Image 17 de set. de 2026, 14_59_43.png" alt="O Amor Diário">
+            </div>
+            <span class="date">O Presente</span>
+            <h3>A Escolha de Todos os Dias</h3>
+            <p>Amar você não é apenas um sentimento, é a melhor decisão que tomo todos os dias ao acordar.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção da Carta -->
+    <section class="letter-section">
+      <div class="letter-card">
+        <h2>Minha Declaração</h2>
+        <p>
+          Com você, aprendi o verdadeiro significado de parceria, carinho, lealdade e paz. Você transformou minha rotina em poesia e me deu motivos infinitos para sonhar alto. 
+          Hoje, não consigo e nem quero imaginar meu futuro sem o seu sorriso para iluminar meus dias.
+        </p>
+        <p class="signature">Com todo meu amor, para sempre seu.</p>
+      </div>
+    </section>
+
+    <!-- O Pedido Final -->
+    <section class="proposal-section">
+      <div class="ring-box">
+        <div class="sparkle"></div>
+        💍
+      </div>
+      <h2 class="big-question">Quer ser minha noiva?</h2>
+      
+      <div class="decision-buttons">
+        <button id="btn-yes" class="btn btn-yes">SIM, com toda certeza! 💖</button>
+        <button id="btn-no" class="btn btn-no">Não</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de Celebração após o "Sim" -->
+  <div id="celebration-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="heart-pulse">❤️</div>
+      <h2>Você me fez a pessoa mais feliz do mundo!</h2>
+      <p>Nosso "para sempre" começa oficialmente agora.</p>
+      <button onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.getElementById('celebration-modal').classList.add('hidden');" class="glow-btn">Rever Nossa História</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
